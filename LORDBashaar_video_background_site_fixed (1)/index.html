@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070a13">
+<meta name="description" content="LORDBashaar — Gaming, streaming, and community.">
+<meta property="og:title" content="LORDBashaar">
+<meta property="og:description" content="Gaming. Streaming. Community. One Legend.">
+<title>LORDBashaar | Official Links</title>
+<style>
+:root{--bg:#060913;--white:#fff;--muted:#c9c9d3;--purple:#c58aff;--red:#ff414c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100svh;color:var(--white);font-family:Inter,Arial,sans-serif;background:#060913;overflow:hidden}
+.scene{position:fixed;inset:0;z-index:-3;overflow:hidden;background:radial-gradient(ellipse at 52% 42%,rgba(90,45,83,.28),transparent 34%),linear-gradient(90deg,#171522 0%,#090d19 18%,#060913 40%,#090b16 66%,#080b15 100%);background-size:150% 150%;animation:ambientDrift 22s ease-in-out infinite alternate;will-change:background-position}
+.scene-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none}.scene:before{content:"";position:absolute;z-index:1;inset:-8%;opacity:.48;background:repeating-linear-gradient(90deg,transparent 0 10%,rgba(0,0,0,.7) 10.2% 11%,transparent 11.2% 20%),linear-gradient(180deg,transparent 65%,rgba(0,0,0,.8));animation:roomParallax 28s ease-in-out infinite alternate}
+.scene:after{content:"";position:absolute;z-index:2;inset:0;background:radial-gradient(ellipse at 20% 75%,rgba(117,67,155,.15),transparent 35%),radial-gradient(ellipse at 80% 25%,rgba(173,54,83,.13),transparent 32%),linear-gradient(90deg,rgba(2,5,13,.45),rgba(2,5,13,.55) 30%,rgba(2,5,13,.4) 70%,rgba(2,5,13,.7)),linear-gradient(0deg,rgba(3,6,14,.85),transparent 40%,rgba(3,6,14,.25));background-size:130% 130%;animation:glowDrift 16s ease-in-out infinite alternate;pointer-events:none}
+@keyframes ambientDrift{0%{background-position:0% 35%}50%{background-position:100% 65%}100%{background-position:35% 100%}}
+@keyframes roomParallax{0%{transform:translate3d(-1%,0,0)}100%{transform:translate3d(1%,0,0)}}
+@keyframes glowDrift{0%{background-position:0% 50%}100%{background-position:100% 50%}}
+@media(prefers-reduced-motion:reduce){.scene,.scene:before,.scene:after{animation:none!important}}
+.room{position:fixed;inset:0;z-index:-2;opacity:.45;pointer-events:none}
+.shelf{position:absolute;width:14%;height:2px;background:#353342;box-shadow:0 5px 0 #111522,0 8px 0 #23202e;left:0}
+.shelf.one{top:36%}.shelf.two{top:61%}.shelf.right{left:auto;right:0;width:19%;top:29%}.shelf.right2{left:auto;right:0;width:19%;top:47%}
+.monitor:after{content:"STREAM\\A OFFLINE";white-space:pre;display:grid;place-items:center;text-align:center;height:100%;font-family:monospace;font-weight:bold;font-size:clamp(10px,2vw,24px);color:#8883aa}
+.poster{position:absolute;top:0;width:12%;height:33%;border:2px solid #171724;background:linear-gradient(135deg,#272333,#121624 55%,#342128);opacity:.8}.poster.p1{left:17%;height:28%}.poster.p2{left:31%;top:0;height:20%;background:linear-gradient(135deg,#151c2a,#412a2b)}.poster.p3{left:32%;top:28%;height:26%;background:linear-gradient(130deg,#30212e,#131624)}
+.window{position:absolute;left:49%;top:0;width:24%;height:63%;border:9px solid #141722;background:linear-gradient(180deg,#090d19,#28202b 70%,#38252c);box-shadow:inset 0 0 0 2px #38262c}.window:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 28%,#10131e 28.5% 31%,transparent 31.5% 57%),linear-gradient(180deg,transparent,#17121d)}
+
+
+.content{min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px 20px 70px}.profile{width:min(430px,100%);display:flex;align-items:center;flex-direction:column;transform:translateY(8px)}
+.avatar-wrap{width:190px;height:190px;border-radius:50%;padding:7px;background:#090b12;border:2px solid rgba(255,255,255,.14);box-shadow:0 0 0 5px rgba(0,0,0,.42),0 0 35px rgba(188,105,255,.14);margin-bottom:20px}
+.avatar{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;border:2px solid #28202c}
+h1{font-size:clamp(2rem,4vw,2.45rem);line-height:1;margin:0 0 9px;font-weight:900;letter-spacing:-.04em;text-shadow:0 0 18px rgba(198,123,255,.6)}
+.subtitle{font-size:1rem;margin:0;color:#fff;text-shadow:0 2px 8px #000}
+.socials{display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;margin-top:42px}
+.social{--brand:#d3a3ff;display:grid;place-items:center;width:31px;height:38px;color:#fff;text-decoration:none;transition:transform .22s cubic-bezier(.34,1.56,.64,1),color .2s;animation:socIn .6s cubic-bezier(.34,1.56,.64,1) calc(.3s + var(--i,0)*.08s) backwards}
+.social:hover,.social:focus-visible{transform:translateY(-6px) scale(1.18);color:var(--brand)}
+.social svg{width:32px;height:32px;fill:currentColor;overflow:visible;transition:filter .2s}
+.social:hover svg,.social:focus-visible svg{filter:drop-shadow(0 0 9px var(--brand))}
+.s-kick{--brand:#53fc18}.s-fb{--brand:#1877f2}.s-ig{--brand:#e1306c}.s-tt{--brand:#fff}.s-wa{--brand:#25d366}.s-yt{--brand:#f00}.s-dc{--brand:#5865f2}
+.s-ig:hover svg,.s-ig:focus-visible svg{fill:url(#igGrad)}
+.s-tt:hover svg,.s-tt:focus-visible svg{filter:drop-shadow(-2px -1px 0 #25f4ee) drop-shadow(2px 1px 0 #fe2c55);animation:ttGlitch .45s steps(2,end) infinite}
+.s-kick .kick-icon{animation:kickPix 3.4s steps(2,end) 1.4s infinite}
+.s-fb svg{animation:fbPop 3.6s ease-in-out 1.2s infinite}
+.s-ig svg{animation:igTilt 4.2s ease-in-out 1.6s infinite}
+.s-tt svg{animation:ttBeat 3.2s ease-in-out .9s infinite}
+.s-wa svg{animation:waRing 4s ease-in-out 1.9s infinite;transform-origin:50% 60%}
+.s-yt svg{animation:ytPulse 2.6s ease-in-out .5s infinite}
+.s-dc svg{animation:dcFloat 3s ease-in-out .2s infinite}
+@keyframes socIn{from{opacity:0;transform:translateY(16px) scale(.6)}to{opacity:1;transform:none}}
+@keyframes kickPix{0%,70%,100%{transform:scale(1)}78%{transform:scale(1.14)}86%{transform:scale(.94)}}
+@keyframes fbPop{0%,60%,100%{transform:scale(1)}72%{transform:scale(1.18)}82%{transform:scale(.94)}90%{transform:scale(1.06)}}
+@keyframes igTilt{0%,55%,100%{transform:rotate(0)}65%{transform:rotate(-14deg)}75%{transform:rotate(12deg)}85%{transform:rotate(-6deg)}92%{transform:rotate(3deg)}}
+@keyframes ttBeat{0%,50%,100%{transform:scale(1)}10%{transform:scale(1.16)}20%{transform:scale(.97)}30%{transform:scale(1.1)}40%{transform:scale(1)}}
+@keyframes ttGlitch{0%,100%{transform:translate(0)}20%{transform:translate(-2px,1px)}40%{transform:translate(2px,-1px)}60%{transform:translate(-1px,-1px)}80%{transform:translate(1px,1px)}}
+@keyframes waRing{0%,55%,100%{transform:rotate(0)}60%{transform:rotate(-16deg)}66%{transform:rotate(16deg)}72%{transform:rotate(-12deg)}78%{transform:rotate(12deg)}84%{transform:rotate(-6deg)}90%{transform:rotate(0)}}
+@keyframes ytPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.13)}}
+@keyframes dcFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@media(prefers-reduced-motion:reduce){.social,.social svg{animation:none!important}}
+.social .kick-icon{width:28px;height:28px}
+.instapay-link{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-top:22px;padding:10px 18px 10px 14px;border:1px solid rgba(255,255,255,.24);border-radius:999px;background:rgba(9,12,24,.68);color:#fff;text-decoration:none;font-size:14px;font-weight:700;letter-spacing:.02em;box-shadow:0 6px 22px rgba(0,0,0,.2);transition:transform .18s,border-color .18s;animation:ipEnter .8s cubic-bezier(.22,1,.36,1) .5s backwards,ipRing 2.8s ease-out 1.5s infinite}
+.instapay-link:hover{transform:translateY(-2px);border-color:#bda0ff}
+.instapay-link:after{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:0;width:45%;background:linear-gradient(100deg,transparent,rgba(214,175,255,.38),transparent);transform:translateX(-160%) skewX(-18deg);animation:ipShine 4.2s ease-in-out 2s infinite;pointer-events:none}
+.instapay-logo{display:grid;place-items:center;min-width:28px;height:28px;transition:transform .28s cubic-bezier(.34,1.56,.64,1)}
+.instapay-link:hover .instapay-logo{transform:scale(1.18) rotate(-8deg)}
+.instapay-logo img{display:none;height:22px;width:auto}
+.instapay-logo.has-img img{display:block;animation:ipLogo 2.8s ease-in-out infinite}
+.instapay-logo.has-img .instapay-mark{display:none}
+.instapay-mark{display:grid;place-items:center;width:25px;height:25px;border-radius:50%;background:#7b45c7;color:#fff;font-size:10px;font-weight:900;letter-spacing:-.06em;animation:ipLogo 2.8s ease-in-out infinite}
+@keyframes ipEnter{from{opacity:0;transform:translateY(18px) scale(.94)}to{opacity:1;transform:none}}
+@keyframes ipRing{0%{box-shadow:0 6px 22px rgba(0,0,0,.2),0 0 0 0 rgba(160,100,240,.5)}70%,100%{box-shadow:0 6px 22px rgba(0,0,0,.2),0 0 0 14px rgba(160,100,240,0)}}
+@keyframes ipShine{0%,55%{transform:translateX(-160%) skewX(-18deg)}100%{transform:translateX(330%) skewX(-18deg)}}
+@keyframes ipLogo{0%,100%{transform:scale(1);filter:drop-shadow(0 0 0 rgba(190,130,255,0))}50%{transform:scale(1.12);filter:drop-shadow(0 0 7px rgba(190,130,255,.75))}}
+@media(prefers-reduced-motion:reduce){.instapay-link,.instapay-link:after,.instapay-logo img,.instapay-mark{animation:none!important}}
+
+.footer{position:fixed;bottom:18px;left:0;right:0;text-align:center;font-size:11px;line-height:1.4;color:#f0edf6;text-shadow:0 2px 6px #000}.footer a{color:#d6a1ff;text-decoration:none}
+@media(max-width:650px){.avatar-wrap{width:155px;height:155px}.socials{gap:15px;margin-top:32px}.social{width:28px}.social svg{width:29px;height:29px}.social .kick-icon{width:26px;height:26px}.poster.p1{width:22%;left:0}.poster.p2{left:22%;width:17%}.poster.p3{left:2%;top:35%;height:23%;width:20%}.window{left:42%;width:39%;height:44%}.footer{bottom:13px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="scene"><video class="scene-video" autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="lordbashaar_background.mp4" type="video/mp4"></video></div>
+<div class="room" aria-hidden="true">
+  <div class="poster p1"></div><div class="poster p2"></div><div class="poster p3"></div>
+  <div class="window"></div><div class="shelf one"></div><div class="shelf two"></div>
+  <div class="shelf right"></div><div class="shelf right2"></div>
+</div>
+<main class="content">
+  <section class="profile" aria-label="LORDBashaar official profile">
+    <div class="avatar-wrap"><img class="avatar" src="profile.png" alt="LORDBashaar profile photo"></div>
+    <h1>LORDBashaar</h1>
+    <p class="subtitle">Content Creator · Streamer</p>
+    <nav class="socials" aria-label="Official social links">
+      <a class="social s-kick" style="--i:0" href="https://kick.com/lordbashaar" target="_blank" rel="noopener noreferrer" aria-label="Kick" title="Kick"><svg class="kick-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M1.333 0h8v5.333H12V2.667h2.667V0h8v8H20v2.667h-2.667v2.666H20V16h2.667v8h-8v-2.667H12v-2.666H9.333V24h-8Z"/></svg></a>
+      <a class="social s-fb" style="--i:1" href="https://www.facebook.com/LORDBashaar/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.2 10.13 24v-8.44H7.08v-3.49h3.05V9.4c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.96h-1.51c-1.49 0-1.95.93-1.95 1.88v2.27h3.32l-.53 3.49h-2.79V24C19.61 23.2 24 18.1 24 12.07z"/></svg></a>
+      <a class="social s-ig" style="--i:2" href="https://www.instagram.com/lordbashaar/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24"><defs><linearGradient id="igGrad" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#feda75"/><stop offset=".3" stop-color="#fa7e1e"/><stop offset=".55" stop-color="#d62976"/><stop offset=".8" stop-color="#962fbf"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm0 2h10c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3zm11 1.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/></svg></a>
+      <a class="social s-tt" style="--i:3" href="https://www.tiktok.com/@lordbashaar?_r=1&_t=zs-96ypdnbqnlr" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.55v13.67a2.9 2.9 0 0 1-2.9 2.9 2.9 2.9 0 1 1 2.9-2.9c0-.26-.04-.51-.1-.75v-3.62a6.48 6.48 0 0 0-2.8-.63 6.46 6.46 0 1 0 6.46 6.46V9.96a8.3 8.3 0 0 0 4.86 1.56V8a4.85 4.85 0 0 1-1.1-.13z"/></svg></a>
+      <a class="social s-wa" style="--i:4" href="https://www.whatsapp.com/channel/0029Vb7lsngEawdxbD5zyk0b" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Channel" title="WhatsApp"><svg viewBox="0 0 24 24"><path d="M20.52 3.48A11.8 11.8 0 0 0 12.12 0C5.58 0 .26 5.32.26 11.86c0 2.09.55 4.13 1.59 5.93L.16 24l6.36-1.67a11.9 11.9 0 0 0 5.6 1.42h.01c6.54 0 11.86-5.32 11.86-11.86 0-3.17-1.23-6.15-3.47-8.41zM12.13 21.7a9.85 9.85 0 0 1-5.02-1.37l-.36-.21-3.77.99 1.01-3.68-.23-.38a9.81 9.81 0 0 1-1.51-5.19c0-5.43 4.42-9.85 9.86-9.85 2.63 0 5.1 1.03 6.96 2.89a9.79 9.79 0 0 1 2.88 6.97c0 5.43-4.42 9.85-9.85 9.85zm5.41-7.37c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.09 4.49.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.13-.27-.2-.57-.35z"/></svg></a>
+      <a class="social s-yt" style="--i:5" href="https://www.youtube.com/channel/UCXujVHgv9kZON2dOMIl7iDA" target="_blank" rel="noopener noreferrer" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.11-2.12C19.53 3.57 12 3.57 12 3.57s-7.53 0-9.39.51A3 3 0 0 0 .5 6.2 31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 5.8 3 3 0 0 0 2.11 2.12c1.86.51 9.39.51 9.39.51s7.53 0 9.39-.51a3 3 0 0 0 2.11-2.12A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-5.8zM9.55 15.6V8.4L15.82 12z"/></svg></a>
+      <a class="social s-dc" style="--i:6" href="https://discord.com/invite/xFv9QvFSFQ" target="_blank" rel="noopener noreferrer" aria-label="Discord" title="Discord"><svg viewBox="0 0 24 24"><path d="M20.32 4.37A19.8 19.8 0 0 0 15.4 2.85a13.7 13.7 0 0 0-.63 1.3 18.3 18.3 0 0 0-5.54 0c-.17-.44-.38-.88-.63-1.3a19.7 19.7 0 0 0-4.92 1.53C.56 8.98-.28 13.48.14 17.92a19.9 19.9 0 0 0 6.03 3.06c.49-.67.92-1.38 1.29-2.13-.71-.27-1.39-.6-2.03-.99.17-.12.34-.25.5-.38 3.91 1.83 8.15 1.83 12.01 0 .16.13.33.26.5.38-.65.39-1.33.72-2.04.99.37.75.8 1.46 1.29 2.13a19.8 19.8 0 0 0 6.04-3.06c.5-5.15-.86-9.61-3.41-13.55zM8.02 14.9c-1.17 0-2.13-1.07-2.13-2.39s.94-2.4 2.13-2.4 2.15 1.08 2.13 2.4c0 1.32-.94 2.39-2.13 2.39zm7.96 0c-1.17 0-2.13-1.07-2.13-2.39s.94-2.4 2.13-2.4 2.15 1.08 2.13 2.4c0 1.32-.94 2.39-2.13 2.39z"/></svg></a>
+    </nav>
+    <a class="instapay-link" href="https://ipn.eg/S/basharmohamed349/instapay/0gK4dR" target="_blank" rel="noopener noreferrer" aria-label="InstaPay" title="InstaPay">
+      <span class="instapay-logo" aria-hidden="true">
+        <img src="instapay-logo.png" alt="" width="55" height="22" decoding="async">
+        <span class="instapay-mark">IP</span>
+      </span>
+      <span class="instapay-text">InstaPay</span>
+    </a>
+  </section>
+</main>
+<footer class="footer">© <span id="year"></span> LORDBashaar — All rights reserved<br>Designed for the legend</footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+(function(){
+  var box=document.querySelector('.instapay-logo'),img=box&&box.querySelector('img');
+  if(!img)return;
+  var alts=['instapay-logo.svg','instapay-logo.webp'];
+  function ok(){if(img.naturalWidth>0)box.classList.add('has-img')}
+  function fail(){var s=alts.shift();if(s)img.src=s}
+  img.addEventListener('load',ok);img.addEventListener('error',fail);
+  if(img.complete){img.naturalWidth>0?ok():fail()}
+})();
+
+</script>
+</body>
+</html>
